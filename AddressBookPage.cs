@@ -87,6 +87,8 @@ namespace AddressBook
         private void delete_bt_Click(object sender, EventArgs e)
         {
             contacts_list.SelectedItems[0].SubItems[0].Text = String.Empty;
+            var item = contacts_list.SelectedItems[0];
+            contacts_list.Items.Remove(item);
         }
 
         private void clear_bt_Click(object sender, EventArgs e)
@@ -112,6 +114,5 @@ namespace AddressBook
             }
            
         }
-
     }
 }

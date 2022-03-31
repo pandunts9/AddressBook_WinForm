@@ -45,13 +45,14 @@ namespace AddressBook
             this.name_tb = new System.Windows.Forms.TextBox();
             this.name_lbl = new System.Windows.Forms.Label();
             this.contacts_list = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // warning_label_2
             // 
             this.warning_label_2.AutoSize = true;
             this.warning_label_2.ForeColor = System.Drawing.Color.DarkRed;
-            this.warning_label_2.Location = new System.Drawing.Point(429, 205);
+            this.warning_label_2.Location = new System.Drawing.Point(429, 275);
             this.warning_label_2.Name = "warning_label_2";
             this.warning_label_2.Size = new System.Drawing.Size(149, 13);
             this.warning_label_2.TabIndex = 67;
@@ -61,7 +62,8 @@ namespace AddressBook
             // clear_bt
             // 
             this.clear_bt.BackColor = System.Drawing.Color.Chocolate;
-            this.clear_bt.Location = new System.Drawing.Point(432, 275);
+            this.clear_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_bt.Location = new System.Drawing.Point(422, 344);
             this.clear_bt.Name = "clear_bt";
             this.clear_bt.Size = new System.Drawing.Size(68, 30);
             this.clear_bt.TabIndex = 65;
@@ -73,7 +75,8 @@ namespace AddressBook
             // edit_bt
             // 
             this.edit_bt.BackColor = System.Drawing.Color.Chocolate;
-            this.edit_bt.Location = new System.Drawing.Point(521, 275);
+            this.edit_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit_bt.Location = new System.Drawing.Point(510, 344);
             this.edit_bt.Name = "edit_bt";
             this.edit_bt.Size = new System.Drawing.Size(68, 30);
             this.edit_bt.TabIndex = 64;
@@ -85,7 +88,8 @@ namespace AddressBook
             // delete_bt
             // 
             this.delete_bt.BackColor = System.Drawing.Color.Chocolate;
-            this.delete_bt.Location = new System.Drawing.Point(351, 275);
+            this.delete_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_bt.Location = new System.Drawing.Point(337, 344);
             this.delete_bt.Name = "delete_bt";
             this.delete_bt.Size = new System.Drawing.Size(68, 30);
             this.delete_bt.TabIndex = 63;
@@ -96,7 +100,8 @@ namespace AddressBook
             // add_bt
             // 
             this.add_bt.BackColor = System.Drawing.Color.Chocolate;
-            this.add_bt.Location = new System.Drawing.Point(595, 275);
+            this.add_bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_bt.Location = new System.Drawing.Point(595, 344);
             this.add_bt.Name = "add_bt";
             this.add_bt.Size = new System.Drawing.Size(68, 30);
             this.add_bt.TabIndex = 62;
@@ -107,7 +112,7 @@ namespace AddressBook
             // phone_tb
             // 
             this.phone_tb.BackColor = System.Drawing.Color.Chocolate;
-            this.phone_tb.Location = new System.Drawing.Point(432, 173);
+            this.phone_tb.Location = new System.Drawing.Point(432, 242);
             this.phone_tb.Name = "phone_tb";
             this.phone_tb.Size = new System.Drawing.Size(231, 20);
             this.phone_tb.TabIndex = 61;
@@ -115,19 +120,19 @@ namespace AddressBook
             // 
             // phone_lb
             // 
-            this.phone_lb.AutoSize = true;
             this.phone_lb.BackColor = System.Drawing.Color.Chocolate;
             this.phone_lb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phone_lb.Location = new System.Drawing.Point(337, 173);
+            this.phone_lb.Location = new System.Drawing.Point(337, 242);
             this.phone_lb.Name = "phone_lb";
-            this.phone_lb.Size = new System.Drawing.Size(78, 15);
+            this.phone_lb.Size = new System.Drawing.Size(89, 20);
             this.phone_lb.TabIndex = 60;
             this.phone_lb.Text = "Phone number";
+            this.phone_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // phisycalAddress_tb
             // 
             this.phisycalAddress_tb.BackColor = System.Drawing.Color.Chocolate;
-            this.phisycalAddress_tb.Location = new System.Drawing.Point(432, 136);
+            this.phisycalAddress_tb.Location = new System.Drawing.Point(432, 197);
             this.phisycalAddress_tb.Name = "phisycalAddress_tb";
             this.phisycalAddress_tb.Size = new System.Drawing.Size(231, 20);
             this.phisycalAddress_tb.TabIndex = 59;
@@ -135,85 +140,99 @@ namespace AddressBook
             // phisycalAddress_lb
             // 
             this.phisycalAddress_lb.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.phisycalAddress_lb.AutoSize = true;
             this.phisycalAddress_lb.BackColor = System.Drawing.Color.Chocolate;
             this.phisycalAddress_lb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phisycalAddress_lb.Location = new System.Drawing.Point(337, 136);
+            this.phisycalAddress_lb.Location = new System.Drawing.Point(337, 197);
             this.phisycalAddress_lb.Name = "phisycalAddress_lb";
-            this.phisycalAddress_lb.Size = new System.Drawing.Size(89, 15);
+            this.phisycalAddress_lb.Size = new System.Drawing.Size(89, 20);
             this.phisycalAddress_lb.TabIndex = 58;
             this.phisycalAddress_lb.Text = "Physical Address";
+            this.phisycalAddress_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // email_tb
             // 
             this.email_tb.BackColor = System.Drawing.Color.Chocolate;
-            this.email_tb.Location = new System.Drawing.Point(432, 95);
+            this.email_tb.Location = new System.Drawing.Point(432, 157);
             this.email_tb.Name = "email_tb";
             this.email_tb.Size = new System.Drawing.Size(231, 20);
             this.email_tb.TabIndex = 57;
             // 
             // email_lb
             // 
-            this.email_lb.AutoSize = true;
             this.email_lb.BackColor = System.Drawing.Color.Chocolate;
             this.email_lb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.email_lb.Location = new System.Drawing.Point(337, 98);
+            this.email_lb.Location = new System.Drawing.Point(337, 157);
             this.email_lb.Name = "email_lb";
-            this.email_lb.Size = new System.Drawing.Size(34, 15);
+            this.email_lb.Size = new System.Drawing.Size(89, 20);
             this.email_lb.TabIndex = 56;
             this.email_lb.Text = "Email";
+            this.email_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lastName_tb
             // 
             this.lastName_tb.BackColor = System.Drawing.Color.Chocolate;
-            this.lastName_tb.Location = new System.Drawing.Point(432, 56);
+            this.lastName_tb.Location = new System.Drawing.Point(432, 118);
             this.lastName_tb.Name = "lastName_tb";
             this.lastName_tb.Size = new System.Drawing.Size(231, 20);
             this.lastName_tb.TabIndex = 55;
             // 
             // lastName_lb
             // 
-            this.lastName_lb.AutoSize = true;
             this.lastName_lb.BackColor = System.Drawing.Color.Chocolate;
             this.lastName_lb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lastName_lb.Location = new System.Drawing.Point(337, 59);
+            this.lastName_lb.Location = new System.Drawing.Point(337, 118);
             this.lastName_lb.Name = "lastName_lb";
-            this.lastName_lb.Size = new System.Drawing.Size(60, 15);
+            this.lastName_lb.Size = new System.Drawing.Size(89, 20);
             this.lastName_lb.TabIndex = 54;
             this.lastName_lb.Text = "Last Name";
+            this.lastName_lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // name_tb
             // 
             this.name_tb.BackColor = System.Drawing.Color.Chocolate;
-            this.name_tb.Location = new System.Drawing.Point(432, 22);
+            this.name_tb.Location = new System.Drawing.Point(432, 77);
             this.name_tb.Name = "name_tb";
             this.name_tb.Size = new System.Drawing.Size(231, 20);
             this.name_tb.TabIndex = 53;
             // 
             // name_lbl
             // 
-            this.name_lbl.AutoSize = true;
             this.name_lbl.BackColor = System.Drawing.Color.Chocolate;
             this.name_lbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.name_lbl.Location = new System.Drawing.Point(337, 22);
+            this.name_lbl.Location = new System.Drawing.Point(337, 77);
             this.name_lbl.Name = "name_lbl";
-            this.name_lbl.Size = new System.Drawing.Size(37, 15);
+            this.name_lbl.Size = new System.Drawing.Size(89, 20);
             this.name_lbl.TabIndex = 52;
             this.name_lbl.Text = "Name";
             this.name_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // contacts_list
             // 
+            this.contacts_list.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.contacts_list.HideSelection = false;
-            this.contacts_list.Location = new System.Drawing.Point(32, 22);
+            this.contacts_list.Location = new System.Drawing.Point(35, 77);
             this.contacts_list.Name = "contacts_list";
             this.contacts_list.Size = new System.Drawing.Size(296, 297);
             this.contacts_list.TabIndex = 51;
             this.contacts_list.UseCompatibleStateImageBehavior = false;
+            this.contacts_list.View = System.Windows.Forms.View.List;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Chocolate;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 55);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Address Book";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(694, 341);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(694, 386);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.warning_label_2);
             this.Controls.Add(this.clear_bt);
             this.Controls.Add(this.edit_bt);
@@ -256,6 +275,7 @@ namespace AddressBook
         private System.Windows.Forms.TextBox name_tb;
         private System.Windows.Forms.Label name_lbl;
         private System.Windows.Forms.ListView contacts_list;
+        private System.Windows.Forms.Label label1;
     }
 }
 
