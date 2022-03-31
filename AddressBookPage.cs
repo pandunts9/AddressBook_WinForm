@@ -33,14 +33,14 @@ namespace AddressBook
         /// <returns>Returns boolean value</returns>
         private bool IsCompleted()
         {
-            if(name_tb.Text.Length>0 && lastName_tb.Text.Length>0 && email_tb.Text.Length>0 &&
-                phisycalAddress_tb.Text.Length>0 && phone_tb.Text.Length > 0)
+            if (name_tb.Text.Length > 0 && lastName_tb.Text.Length > 0 && email_tb.Text.Length > 0 &&
+                phisycalAddress_tb.Text.Length > 0 && phone_tb.Text.Length > 0)
             {
                 return true;
             }
             return false;
         }
-        
+
         private List<Contact> Contacts = new List<Contact>();
         Contact contact = new Contact();
         public Form1()
@@ -60,12 +60,13 @@ namespace AddressBook
         }
 
         private void add_bt_Click(object sender, EventArgs e)
-        {            
+        {
             Contact contact = new Contact() { };
             contact.FirstName = name_tb.Text;
             contact.LastName = lastName_tb.Text;
+            contact.Email = email_tb.Text;
             contact.PhysicalAddress = phisycalAddress_tb.Text;
-            if ((phone_tb.Text.Length>0))
+            if ((phone_tb.Text.Length > 0))
             {
                 contact.PhoneNumber = Convert.ToInt32(phone_tb.Text);
             }
@@ -79,9 +80,9 @@ namespace AddressBook
             {
                 warning_label_2.Visible = true;
             }
-           
+
             ClearFields();
-            
+
         }
         private void delete_bt_Click(object sender, EventArgs e)
         {
@@ -94,9 +95,23 @@ namespace AddressBook
             warning_label_2.Visible = false;
         }
 
-        private void contacts_list_ItemActivate(object sender, EventArgs e)
+        
+        private void edit_bt_Click(object sender, EventArgs e)
         {
+            
+            foreach (Contact item in Contacts)
+            {
+                if (item.FullName == contacts_list.SelectedItems[0].SubItems[0].Text)
+                {
+                    name_tb.Text = item.FirstName;
+                    lastName_tb.Text = item.LastName;
+                    email_tb.Text = item.Email;
+                    phisycalAddress_tb.Text = item.PhysicalAddress;
+                    phone_tb.Text = item.PhoneNumber.ToString();
+                }
+            }
            
         }
+
     }
 }

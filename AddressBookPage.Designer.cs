@@ -80,6 +80,7 @@ namespace AddressBook
             this.edit_bt.Text = "Edit";
             this.edit_bt.UseCompatibleTextRendering = true;
             this.edit_bt.UseVisualStyleBackColor = false;
+            this.edit_bt.Click += new System.EventHandler(this.edit_bt_Click);
             // 
             // delete_bt
             // 
@@ -99,7 +100,7 @@ namespace AddressBook
             this.add_bt.Name = "add_bt";
             this.add_bt.Size = new System.Drawing.Size(68, 30);
             this.add_bt.TabIndex = 62;
-            this.add_bt.Text = "Add";
+            this.add_bt.Text = "Save";
             this.add_bt.UseVisualStyleBackColor = false;
             this.add_bt.Click += new System.EventHandler(this.add_bt_Click);
             // 
@@ -209,7 +210,6 @@ namespace AddressBook
             this.contacts_list.Size = new System.Drawing.Size(296, 297);
             this.contacts_list.TabIndex = 51;
             this.contacts_list.UseCompatibleStateImageBehavior = false;
-            this.contacts_list.ItemActivate += new System.EventHandler(this.contacts_list_ItemActivate);
             // 
             // Form1
             // 
