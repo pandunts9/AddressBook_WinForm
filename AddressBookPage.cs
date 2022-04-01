@@ -47,10 +47,6 @@ namespace AddressBook
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("hello");
-        }
         private void phone_tb_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "[0-9]"))
@@ -163,5 +159,7 @@ namespace AddressBook
             }
 
         }
+
+      
     }
 }
