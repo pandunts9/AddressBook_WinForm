@@ -75,10 +75,16 @@ namespace AddressBook
                 Contacts.Add(contact);
                 contacts_list.Items.Add(contact.FullName);
                 warning_label_2.Visible = false;
+                warning_label_3.Visible = false;
+                warning_label_1.Visible = false;
+
             }
             else
             {
                 warning_label_2.Visible = true;
+                warning_label_3.Visible = false;
+                warning_label_1.Visible = false;
+
             }
 
             ClearFields();
@@ -86,33 +92,76 @@ namespace AddressBook
         }
         private void delete_bt_Click(object sender, EventArgs e)
         {
-            contacts_list.SelectedItems[0].SubItems[0].Text = String.Empty;
-            var item = contacts_list.SelectedItems[0];
-            contacts_list.Items.Remove(item);
+            if (contacts_list.Items.Count != 0)
+            {
+                warning_label_3.Visible = false;
+                if (contacts_list.SelectedItems.Count > 0)
+                {
+                    warning_label_1.Visible = false;
+                    warning_label_3.Visible = false;
+                    warning_label_2.Visible = false;
+                    var item = contacts_list.SelectedItems[0];
+                    contacts_list.Items.Remove(item);
+
+                }
+                else
+                {
+                    warning_label_1.Visible = true;
+                    warning_label_3.Visible = false;
+                    warning_label_2.Visible = false;
+                }
+            }
+            else
+            {
+                warning_label_3.Visible = true;
+                warning_label_2.Visible = false;
+            }
+
+
         }
 
         private void clear_bt_Click(object sender, EventArgs e)
         {
             ClearFields();
             warning_label_2.Visible = false;
+            warning_label_1.Visible = false;
+            warning_label_3.Visible = false;
         }
 
-        
+
         private void edit_bt_Click(object sender, EventArgs e)
         {
-            
-            foreach (Contact item in Contacts)
+            if(contacts_list.Items.Count == 0)
             {
-                if (item.FullName == contacts_list.SelectedItems[0].SubItems[0].Text)
+                warning_label_3.Visible = true;
+                warning_label_1.Visible = false;
+                warning_label_2.Visible = false;
+            }
+            else if (contacts_list.SelectedItems.Count > 0)
+            {
+                warning_label_3.Visible = false;
+                warning_label_1.Visible = false;
+                warning_label_2.Visible = false;
+
+                foreach (Contact item in Contacts)
                 {
-                    name_tb.Text = item.FirstName;
-                    lastName_tb.Text = item.LastName;
-                    email_tb.Text = item.Email;
-                    phisycalAddress_tb.Text = item.PhysicalAddress;
-                    phone_tb.Text = item.PhoneNumber.ToString();
+                    if (item.FullName == contacts_list.SelectedItems[0].SubItems[0].Text)
+                    {
+                        name_tb.Text = item.FirstName;
+                        lastName_tb.Text = item.LastName;
+                        email_tb.Text = item.Email;
+                        phisycalAddress_tb.Text = item.PhysicalAddress;
+                        phone_tb.Text = item.PhoneNumber.ToString();
+                    }
                 }
             }
-           
+            else
+            {
+                warning_label_1.Visible = true;
+                warning_label_3.Visible = false;
+                warning_label_2.Visible = false;
+            }
+
         }
     }
 }

@@ -46,6 +46,8 @@ namespace AddressBook
             this.name_lbl = new System.Windows.Forms.Label();
             this.contacts_list = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
+            this.warning_label_1 = new System.Windows.Forms.Label();
+            this.warning_label_3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // warning_label_2
@@ -228,10 +230,34 @@ namespace AddressBook
             this.label1.Text = "Address Book";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // warning_label_1
+            // 
+            this.warning_label_1.AutoSize = true;
+            this.warning_label_1.ForeColor = System.Drawing.Color.DarkRed;
+            this.warning_label_1.Location = new System.Drawing.Point(429, 275);
+            this.warning_label_1.Name = "warning_label_1";
+            this.warning_label_1.Size = new System.Drawing.Size(95, 13);
+            this.warning_label_1.TabIndex = 68;
+            this.warning_label_1.Text = "Please select item!";
+            this.warning_label_1.Visible = false;
+            // 
+            // warning_label_3
+            // 
+            this.warning_label_3.AutoSize = true;
+            this.warning_label_3.ForeColor = System.Drawing.Color.DarkRed;
+            this.warning_label_3.Location = new System.Drawing.Point(429, 275);
+            this.warning_label_3.Name = "warning_label_3";
+            this.warning_label_3.Size = new System.Drawing.Size(162, 13);
+            this.warning_label_3.TabIndex = 69;
+            this.warning_label_3.Text = "There are not any item for select!";
+            this.warning_label_3.Visible = false;
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(694, 386);
+            this.Controls.Add(this.warning_label_3);
+            this.Controls.Add(this.warning_label_1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.warning_label_2);
             this.Controls.Add(this.clear_bt);
@@ -276,6 +302,8 @@ namespace AddressBook
         private System.Windows.Forms.Label name_lbl;
         private System.Windows.Forms.ListView contacts_list;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label warning_label_1;
+        private System.Windows.Forms.Label warning_label_3;
     }
 }
 
